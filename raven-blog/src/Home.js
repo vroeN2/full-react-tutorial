@@ -19,3 +19,9 @@ const Home = () => {
 }
  
 export default Home;
+
+// react dev tools for chrome and firefox
+//
+// https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+//
+//  https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/
