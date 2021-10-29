@@ -19,10 +19,6 @@ const Home = () => {
         console.log('use effect ran - but only once, for initial render');
     },[]);
 
-    useEffect(() => {
-        console.log('use effect ran - on initial render, but also when /name/ changes')
-    },[name]);
-
     return (
         <div className="home">
             <BlogList blogs={blogs} title='All Blogs!' handleDelete={handleDelete} /> 
