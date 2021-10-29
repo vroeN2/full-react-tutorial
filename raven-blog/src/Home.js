@@ -8,19 +8,26 @@ const Home = () => {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
       ]);
 
+      const [name, setName] = useState('mario');
+
     const handleDelete = id => {
         const newBlogs = blogs.filter(blog => blog.id !== id);
         setBlogs(newBlogs);
     }
 
     useEffect(() => {
-        console.log('use effect ran');
-        console.log(blogs);
-    });
+        console.log('use effect ran - but only once, for initial render');
+    },[]);
+
+    useEffect(() => {
+        console.log('use effect ran - on initial render, but also when /name/ changes')
+    },[name]);
 
     return (
         <div className="home">
             <BlogList blogs={blogs} title='All Blogs!' handleDelete={handleDelete} /> 
+            <button onClick={() => setName('luigi')}>change name</button>
+            <p>{ name }</p>
         </div>
     );
 }
