@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -6,6 +7,8 @@ const Create = () => {
     const [author, setAuthor] = useState('mario');
     // Create loading message while our blog is being send to the db    
     const [isPending, setIsPending] = useState(false);
+    // it would be awesome to be able to use browser arrows to go back and forth between already selected posts. Here it begins.
+    const history = useHistory();
 
     // function to prevent auto refresh form on submit. It also creates a new blog entry that will be added to the blog db
     const handleSubmit = e => {
@@ -22,6 +25,10 @@ const Create = () => {
         }).then(() => {
             console.log('new blog added');
             setIsPending(false);
+            // as expected, this functions sends user one page before - to the place they visited right before they decided to create a new blog
+            // history.go(-1);
+            // but it is disabled now. The thing is - we want to push user to the main page after they create new entry.
+            history.push('/');
         })
     }
 
@@ -50,6 +57,7 @@ const Create = () => {
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
+                    <option value="vroeN">vroeN</option>
                 </select>
                 { !isPending && <button>Add blog</button> }
                 { isPending && <button disabled>Adding blog...</button> }

@@ -17,6 +17,24 @@
       "body": "dsdfdsf",
       "author": "yoshi",
       "id": 3
+    },
+    {
+      "title": "just a test of history",
+      "body": "as mentioned in the title - just a test. However, since I'm already here, I can also check something else - which in this case is a behaviour of this text area. It seems it just scrolls the text in this quite small box. It is unacceptable! I should fix that immediately! It should at least be bigger, and the perfect solution would be stretching after user populate the data. \nFor now - bigger box.\n\nThank you for your attention.\n\n\np.s. i'm curious how extra empty lines will work.",
+      "author": "vroeN",
+      "id": 4
+    },
+    {
+      "title": "I have some answers now",
+      "body": "Now I know how does the textarea behave - and I'm not pleased with the results. I should fix that right now. But what makes me feel worse is the extra enter behaviour. It just disappear completely!\n\n\nIt doesn't matter how many 'enters' I will put here, they are all gone after the post is created! Outrageous.",
+      "author": "vroeN",
+      "id": 5
+    },
+    {
+      "title": "test test - will I be pushed to the main mage?",
+      "body": "Let's see.",
+      "author": "vroeN",
+      "id": 6
     }
   ]
 }
