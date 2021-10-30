@@ -4,11 +4,25 @@ const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('mario');
+    // Create loading message while our blog is being send to the db    
+    const [isPending, setIsPending] = useState(false);
 
     // function to prevent auto refresh form on submit. It also creates a new blog entry that will be added to the blog db
     const handleSubmit = e => {
         e.preventDefault();
-        const blog = { title, body, author }
+        const blog = { title, body, author };
+
+        setIsPending(true);
+        
+        // post freshly created blog post to our db
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('new blog added');
+            setIsPending(false);
+        })
     }
 
     return (
@@ -37,7 +51,8 @@ const Create = () => {
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
                 </select>
-                <button>Add blog</button>
+                { !isPending && <button>Add blog</button> }
+                { isPending && <button disabled>Adding blog...</button> }
             </form>
         </div>
     );
