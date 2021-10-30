@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+
+// BlogList shows a blog preview on the main blog page. It maps through all blogs, and takes out a title and an author for each element, then creates a sublink that leads to this particular blog post
 const BlogList = ({ blogs, title }) => {
 
     return (

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// useFetch is a custom hook created to fetch data from the provided link. It catches errors (and displays it), has loading placeholder and can be used whenever it is required to fetch API data.
+
 const useFetch = url => {
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
@@ -34,6 +36,9 @@ const useFetch = url => {
         return () => abortCont.abort();
     },[url]);
 
+    // data - fetched data from source link
+    // isPending - variable responsible for fetch loading time placeholder.
+    // error - if true, shows an error that happened
     return { data, isPending, error };
 }
  
