@@ -13,12 +13,6 @@
       "id": 2
     },
     {
-      "title": "dsffdsf",
-      "body": "dsdfdsf",
-      "author": "yoshi",
-      "id": 3
-    },
-    {
       "title": "just a test of history",
       "body": "as mentioned in the title - just a test. However, since I'm already here, I can also check something else - which in this case is a behaviour of this text area. It seems it just scrolls the text in this quite small box. It is unacceptable! I should fix that immediately! It should at least be bigger, and the perfect solution would be stretching after user populate the data. \nFor now - bigger box.\n\nThank you for your attention.\n\n\np.s. i'm curious how extra empty lines will work.",
       "author": "vroeN",
