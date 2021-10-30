@@ -102,3 +102,11 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.not-found h2 {
+  color: #f1356d;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.not-found p {
+  margin-bottom: 20px;
+}
