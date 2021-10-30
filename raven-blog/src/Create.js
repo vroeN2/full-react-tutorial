@@ -5,10 +5,16 @@ const Create = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('mario');
 
+    // function to prevent auto refresh form on submit. It also creates a new blog entry that will be added to the blog db
+    const handleSubmit = e => {
+        e.preventDefault();
+        const blog = { title, body, author }
+    }
+
     return (
         <div className="create">
             <h2>Add a new blog</h2>
-            <form>
+            <form onSubmit={e => handleSubmit(e)}>
                 <label>Blog title:</label>
                 <input 
                     type="text" 
